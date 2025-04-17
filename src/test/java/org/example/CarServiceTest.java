@@ -8,10 +8,10 @@ import java.util.Set;
 public class CarServiceTest {
 
     private CarService carService;
-    private Car ford1 = new Car("Focus", "Ford");
-    private Car toyota1 = new Car("Camry", "Toyota");
-    private Car ford2 = new Car("Mustang", "Ford");
-    private Car honda1 = new Car("Civic", "Honda");
+    private Car ford1 = new Car("Ford", "Focus");
+    private Car toyota1 = new Car("Toyota", "Camry");
+    private Car ford2 = new Car("Ford", "Mustang");
+    private Car honda1 = new Car("Honda", "Civic");
 
     @Before
     public void setUp() {
@@ -24,7 +24,7 @@ public class CarServiceTest {
 
     @Test
     public void testAddCar_Success() {
-        Car newCar = new Car("Corolla", "Toyota");
+        Car newCar = new Car("Toyota", "Corolla");
         carService.addCar(newCar);
         assertTrue(carService.removeCar(newCar));
         assertEquals(4, carService.getCarCount());
